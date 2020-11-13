@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { count } from 'console';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aufgabe4';
+
+  oddNumbers: number[] = []
+  evenNumbers: number[] = []
+
+  onSecondPassed(numberSeconds: number) {
+    console.log(numberSeconds)
+    if (numberSeconds % 2 === 0) {
+      this.evenNumbers.push(numberSeconds)
+      console.log('pushed in even')
+    }
+    else {
+      this.oddNumbers.push(numberSeconds)
+      console.log('pushed in odd')
+    }
+  }
 }
